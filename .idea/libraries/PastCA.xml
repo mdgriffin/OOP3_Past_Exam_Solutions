@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PastCA">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/PastCA.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
