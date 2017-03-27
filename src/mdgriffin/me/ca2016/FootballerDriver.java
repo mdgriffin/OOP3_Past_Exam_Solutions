@@ -60,7 +60,7 @@ public class FootballerDriver {
         //JOptionPane.showMessageDialog(null, message);
         JOptionPane.showMessageDialog(null, message, "Only over 30", JOptionPane.INFORMATION_MESSAGE);
 
-    };
+    }
 
     public static String playerSetToString (Set players) {
         Iterator<Player> playerIterator = players.iterator();
