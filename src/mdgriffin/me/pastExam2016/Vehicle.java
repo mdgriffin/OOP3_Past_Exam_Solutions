@@ -30,6 +30,10 @@ public abstract class Vehicle implements IDable {
         this.type = type;
     }
 
+    public abstract void setId ();
+
+    public abstract String getId();
+
     @Override
     public String toString() {
         return "Type: " + getType() + "\nNumber of Passengers: " + getPassengerNum();
