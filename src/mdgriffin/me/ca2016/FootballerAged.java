@@ -1,6 +1,5 @@
-/**
- * Created by t00187715 on 27/03/2017.
- */
+package mdgriffin.me.ca2016;
+
 public class FootballerAged extends Footballer {
 
 
