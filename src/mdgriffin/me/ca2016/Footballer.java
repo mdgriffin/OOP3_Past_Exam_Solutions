@@ -1,6 +1,6 @@
 package mdgriffin.me.ca2016;
 
-public class Footballer extends Player implements Comparable<Player> {
+public class Footballer extends Player {
 
     String team;
 
@@ -39,10 +39,6 @@ public class Footballer extends Player implements Comparable<Player> {
     @Override
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public int compareTo(Player o) {
-        return getName().compareTo(o.getName());
     }
 
     public String toString () {

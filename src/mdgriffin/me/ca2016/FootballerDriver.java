@@ -15,10 +15,7 @@ public class FootballerDriver {
 
     public static void main (String[] args) {
         boolean addMore = true;
-        //ArrayList<Player> footballers = new ArrayList<>();
-        //TreeSet<Player> footballers = new TreeSet<>();
-        TreeSet<Player> orderedFootballersAlpha = new TreeSet<>();
-        TreeSet<Player> orderedFootballersAge = new TreeSet<>();
+        TreeSet<Player> footballers = new TreeSet<>();
 
         while (addMore) {
 
@@ -26,8 +23,7 @@ public class FootballerDriver {
             int age = Integer.parseInt(JOptionPane.showInputDialog("What is the age"));
             String team = JOptionPane.showInputDialog("What team does the player play for?");
 
-            orderedFootballersAlpha.add(new Footballer(name, age, team));
-            orderedFootballersAge.add(new FootballerAged(name, age, team));
+            footballers.add(new Footballer(name, age, team));
 
             int selection = JOptionPane.showConfirmDialog(
                     null,
@@ -36,27 +32,22 @@ public class FootballerDriver {
                     JOptionPane.YES_NO_CANCEL_OPTION
             );
 
-
             if (selection != JOptionPane.YES_OPTION) {
                 addMore = false;
             }
         }
 
-        JOptionPane.showMessageDialog(null, playersToString(orderedFootballersAlpha), "Order By Name", JOptionPane.INFORMATION_MESSAGE);
-
-        JOptionPane.showMessageDialog(null, playersToString(orderedFootballersAge), "Order By Age", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, playerSetToString(footballers), "Order By Age", JOptionPane.INFORMATION_MESSAGE);
 
         System.exit(0);
     }
 
     public static void filterOver30 (TreeSet<Player> players) {
-
         Iterator<Player> playerIterator = players.iterator();
         String message = "";
 
         while(playerIterator.hasNext()) {
             Player nextPlayer = playerIterator.next();
-
 
             if (nextPlayer.getAge() > 30) {
                 message += nextPlayer.toString() + "\n\n";
@@ -66,8 +57,7 @@ public class FootballerDriver {
         JOptionPane.showMessageDialog(null, message);
     };
 
-
-    public static String playersToString (TreeSet players) {
+    public static String playerSetToString (TreeSet players) {
         Iterator<Player> playerIterator = players.iterator();
         String message = "";
 
